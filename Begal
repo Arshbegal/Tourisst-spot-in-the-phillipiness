@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calle Crisologo — Vigan, Ilocos Sur</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style id="photos">
+/* Save your two pictures next to this file with these names */
+:root{--p1:url("kalesa.webp");--p2:url("golden-street.webp")}
+</style>
+<style>
+:root{
+  --bg:#f7f0e4;--surface:#fffcf5;--ink:#271c14;--muted:#6c5d4d;--accent:#a8402a;--gold:#c8902c;--line:#e5d6bd;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#140f0b;--surface:#1e1711;--ink:#f4e8d3;--muted:#b6a48c;--accent:#e2805f;--gold:#e8b24a;--line:#382b1f}}
+:root[data-theme="dark"]{--bg:#140f0b;--surface:#1e1711;--ink:#f4e8d3;--muted:#b6a48c;--accent:#e2805f;--gold:#e8b24a;--line:#382b1f}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.7 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+h1,h2,h3{font-family:"Playfair Display",Georgia,"Times New Roman",serif;line-height:1.15;margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+a{color:var(--accent)}
+
+/* menu */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:.8rem;height:58px}
+.brand{font:700 1.1rem "Playfair Display",Georgia,serif;text-decoration:none;color:var(--ink);margin-right:auto;white-space:nowrap}
+nav ul{display:flex;gap:.2rem;list-style:none;margin:0;padding:0}
+nav li a{display:block;text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:500;padding:.4rem .55rem;border-radius:99px;white-space:nowrap;transition:.2s}
+nav li a:hover,nav li a.on{color:var(--accent);background:color-mix(in srgb,var(--gold) 16%,transparent)}
+.btn-i{background:none;border:1px solid var(--line);color:var(--ink);border-radius:99px;width:38px;height:34px;cursor:pointer;font-size:1rem}
+#menu{display:none}
+@media (max-width:1020px){
+  #menu{display:block}
+  nav ul{position:absolute;top:58px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:.6rem 1.25rem 1rem;display:none}
+  nav ul.open{display:flex}
+  nav li a{font-size:1rem;padding:.6rem .8rem;border-radius:10px}
+}
+
+/* home */
+.hero{min-height:88vh;display:flex;align-items:center;text-align:center;color:#f8ead2;padding:5rem 1.25rem;
+  background:linear-gradient(180deg,rgba(14,8,5,.55),rgba(14,8,5,.8)),var(--p1) center/cover}
+.eyebrow{display:inline-block;font-size:.75rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:#f1c36b;border:1px solid currentColor;border-radius:99px;padding:.3rem .9rem;margin-bottom:1.2rem}
+.hero h1{font-size:clamp(2.8rem,10vw,6rem);font-weight:700}
+.hero p{max-width:36rem;margin:1.1rem auto 1.8rem;opacity:.9;font-size:1.15rem}
+.cta{display:inline-block;margin:.3rem;padding:.8rem 1.6rem;border-radius:99px;font-weight:600;text-decoration:none;background:var(--gold);color:#1d110b;transition:transform .2s}
+.cta.ghost{background:none;color:#f8ead2;border:1px solid #f8ead2}
+.cta:hover{transform:translateY(-2px)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:-3rem;position:relative}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:1.2rem;text-align:center;box-shadow:0 12px 30px -18px rgba(60,20,5,.6)}
+.fact strong{display:block;font:700 1.8rem "Playfair Display",Georgia,serif;color:var(--accent)}
+.fact span{font-size:.85rem;color:var(--muted)}
+
+/* sections */
+section{padding:4.5rem 0}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.kicker{color:var(--gold);font-weight:600;font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;margin-bottom:.6rem}
+h2{font-size:clamp(1.9rem,5vw,2.8rem);margin-bottom:1.1rem}
+.lead{max-width:42rem;color:var(--muted)}
+.split{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;align-items:center}
+@media (max-width:760px){.split{grid-template-columns:1fr}}
+.photo{border-radius:20px;border:1px solid var(--line);background:#120b08 center/cover;min-height:340px;cursor:zoom-in;box-shadow:0 18px 40px -24px rgba(60,20,5,.8);position:relative;overflow:hidden;transition:transform .4s}
+.photo:hover{transform:scale(1.015)}
+.photo span{position:absolute;inset:auto 0 0 0;padding:2.2rem 1.1rem .9rem;color:#f8ead2;font-size:.92rem;background:linear-gradient(180deg,transparent,rgba(10,5,2,.88))}
+.photo b{display:block;font:700 1.15rem "Playfair Display",Georgia,serif;color:#f1c36b}
+.p1{background-image:var(--p1)}.p2{background-image:var(--p2)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.2rem;margin-top:2rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem;transition:.25s}
+.alt .card{background:var(--bg)}
+.card:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 18px 36px -22px rgba(60,20,5,.7)}
+.card .ic{font-size:1.7rem}
+.card h3{font-size:1.3rem;margin:.4rem 0}
+.card p{margin:0;color:var(--muted);font-size:.96rem}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.4rem;margin-top:2rem}
+.gallery .photo{min-height:360px}
+.video-box{margin-top:3rem}
+.video-box h3{font-size:1.6rem;margin-bottom:1rem}
+.video{position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#120b08;box-shadow:0 18px 40px -24px rgba(60,20,5,.8)}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.4rem}
+.chips span{background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:.45rem 1rem;font-weight:500;font-size:.95rem}
+.steps{list-style:none;margin:2rem 0 0;padding:0 0 0 1.4rem;border-left:2px solid var(--line)}
+.steps li{position:relative;padding:0 0 1.5rem 1.2rem}
+.steps li::before{content:"";position:absolute;left:-1.95rem;top:.5rem;width:14px;height:14px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 4px var(--bg)}
+.alt .steps li::before{box-shadow:0 0 0 4px var(--surface)}
+.steps b{font:700 1.3rem "Playfair Display",Georgia,serif;color:var(--accent)}
+.steps p{margin:.1rem 0 0;color:var(--muted)}
+.note{font-size:.85rem;color:var(--muted);margin-top:1.8rem}
+blockquote{margin:2.5rem 0 0;padding:1.3rem 1.7rem;border-left:4px solid var(--gold);background:var(--surface);border-radius:0 14px 14px 0;font:500 1.3rem/1.45 "Playfair Display",Georgia,serif}
+.alt blockquote{background:var(--bg)}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem}
+@media (max-width:760px){.contact{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:.88rem;margin:1rem 0 .3rem}
+input,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:.75rem 1rem}
+input:focus,textarea:focus{outline:2px solid var(--gold);border-color:transparent}
+textarea{min-height:130px;resize:vertical}
+button.send{margin-top:1.2rem;border:0;cursor:pointer;font:600 1rem Inter,sans-serif;padding:.8rem 1.8rem;border-radius:99px;background:var(--accent);color:#fff}
+#ok{display:none;margin-top:1rem;color:var(--accent);font-weight:600}
+footer{text-align:center;padding:2.5rem 1.25rem;color:var(--muted);font-size:.9rem}
+.lightbox{position:fixed;inset:0;z-index:50;display:none;background:rgba(8,4,2,.94) center/contain no-repeat;cursor:zoom-out}
+.lightbox.open{display:block}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="brand" href="#home">Calle Crisologo</a>
+  <ul id="links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About the Place</a></li>
+    <li><a href="#attractions">Attractions</a></li>
+    <li><a href="#activities">Activities</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#food">Food and Culture</a></li>
+    <li><a href="#guide">Travel Guide</a></li>
+    <li><a href="#stay">Accommodations</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+  </ul>
+  <button class="btn-i" id="theme" aria-label="Toggle theme">◐</button>
+  <button class="btn-i" id="menu" aria-label="Open menu">☰</button>
+</div></nav>
+
+<header class="hero" id="home">
+  <div class="wrap">
+    <span class="eyebrow">Vigan · Ilocos Sur · UNESCO World Heritage</span>
+    <h1>Calle Crisologo</h1>
+    <p>Step onto a cobblestone street where Spanish-colonial houses, horse-drawn kalesas and lantern light keep old Vigan alive.</p>
+    <a class="cta" href="#attractions">Explore the Street</a><a class="cta ghost" href="#guide">Plan Your Trip</a>
+  </div>
+</header>
+<div class="wrap"><div class="facts">
+  <div class="fact"><strong>1999</strong><span>UNESCO inscription</span></div>
+  <div class="fact"><strong>1572</strong><span>Vigan founded</span></div>
+  <div class="fact"><strong>2015</strong><span>New7Wonders Cities</span></div>
+  <div class="fact"><strong>Kalesa</strong><span>Horse-drawn tours</span></div>
+</div></div>
+
+<section id="about"><div class="wrap split">
+  <div>
+    <div class="kicker">About the Place</div>
+    <h2>A Spanish-era town that stayed</h2>
+    <p class="lead">Vigan is among the best-preserved Spanish colonial towns in Asia, blending Philippine, Chinese and European building traditions. Calle Crisologo is its most famous street, lined with centuries-old ancestral houses and paved in rough cobblestone.</p>
+    <p class="lead">It honors Mena Crisologo, a Vigan-born literary figure and public official. In the Historic Town of Vigan, Ilocos Sur, the street stays walkable, atmospheric and best seen after sunset.</p>
+  </div>
+  <div class="photo p2" role="img" aria-label="Golden lamplight on wet cobblestones and yellow ancestral houses"><span><b>Golden street</b>Lantern light on stone and capiz windows</span></div>
+</div></section>
+
+<section id="attractions" class="alt"><div class="wrap">
+  <div class="kicker">Attractions</div>
+  <h2>What makes the street special</h2>
+  <p class="lead">Everything here is within a short walk, so slow down and look up.</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🧱</div><h3>Cobblestone paving</h3><p>Uneven stone underfoot makes the street feel centuries older than any modern road.</p></div>
+    <div class="card"><div class="ic">🏠</div><h3>Ancestral houses</h3><p><em>Bahay na bato</em> homes: stone and brick below, timber living quarters above.</p></div>
+    <div class="card"><div class="ic">🪟</div><h3>Capiz windows</h3><p>Sliding shell panes soften daylight and glow warm at night.</p></div>
+    <div class="card"><div class="ic">🏮</div><h3>Lantern-lit evenings</h3><p>Wall lamps turn the whole street amber once the sun goes down.</p></div>
+    <div class="card"><div class="ic">⛪</div><h3>Nearby landmarks</h3><p>Plaza Salcedo and Vigan Cathedral are a short stroll from the street.</p></div>
+  </div>
+</div></section>
+
+<section id="activities"><div class="wrap">
+  <div class="kicker">Activities</div>
+  <h2>Things to do</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">🐎</div><h3>Ride a kalesa</h3><p>Tour the heritage district the classic way, by horse-drawn carriage.</p></div>
+    <div class="card"><div class="ic">🚶</div><h3>Evening stroll</h3><p>Walk the lamp-lit street when the heat fades and crowds thin out.</p></div>
+    <div class="card"><div class="ic">📸</div><h3>Photography</h3><p>Blue hour and early morning give the best light on stone and shell windows.</p></div>
+    <div class="card"><div class="ic">🛍️</div><h3>Shop local crafts</h3><p>Look for burnay pottery, woven abel cloth and Ilocano snacks.</p></div>
+  </div>
+</div></section>
+
+<section id="gallery" class="alt"><div class="wrap">
+  <div class="kicker">Gallery</div>
+  <h2>Calle Crisologo after dark</h2>
+  <p class="lead">Tap a photo to view it larger, then scroll down to watch the video.</p>
+  <div class="gallery">
+    <div class="photo p1" role="img" aria-label="A horse-drawn kalesa on the cobblestone street at blue hour"><span><b>Blue hour kalesa</b>A carriage waits as the lamps come on</span></div>
+    <div class="photo p2" role="img" aria-label="Golden lamplight on wet cobblestones along the street"><span><b>Golden street</b>Lantern light on stone and capiz windows</span></div>
+  </div>
+  <div class="video-box">
+    <h3>Watch: Calle Crisologo</h3>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/Wx0cRiNcImg" title="Calle Crisologo, Vigan video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <p class="note">Video not playing? <a href="https://youtu.be/Wx0cRiNcImg?si=anKmq7AxT11r534W" target="_blank" rel="noopener">Watch it on YouTube</a>.</p>
+  </div>
+</div></section>
+
+<section id="food"><div class="wrap">
+  <div class="kicker">Food and Culture</div>
+  <h2>The taste and traditions of Vigan</h2>
+  <p class="lead">Ilocano food is bold, salty and crisp. Culture here lives in the houses, the crafts and the daily rhythm of the street.</p>
+  <div class="chips"><span>Vigan empanada</span><span>Bagnet</span><span>Longganisa</span><span>Okoy</span><span>Sinanglao</span><span>Sugarcane vinegar</span></div>
+  <div class="cards">
+    <div class="card"><div class="ic">🏺</div><h3>Burnay pottery</h3><p>Hand-shaped clay jars are a Vigan craft still made in local workshops.</p></div>
+    <div class="card"><div class="ic">🧵</div><h3>Abel weaving</h3><p>Ilocano woven cloth is a lasting part of the region's heritage.</p></div>
+    <div class="card"><div class="ic">🗣️</div><h3>Ilocano language</h3><p>A friendly <em>Naimbag a bigat</em> (good morning) goes a long way.</p></div>
+  </div>
+  <blockquote>Walk slowly. The street was built for horses, not hurry.</blockquote>
+</div></section>
+
+<section id="guide" class="alt"><div class="wrap">
+  <div class="kicker">Travel Guide</div>
+  <h2>Plan your visit</h2>
+  <div class="cards">
+    <div class="card"><div class="ic">🚌</div><h3>Getting there</h3><p>Vigan is roughly 400 km north of Manila by road; buses run to Vigan City.</p></div>
+    <div class="card"><div class="ic">☀️</div><h3>Best time</h3><p>The drier months, around November to May, are usually the easiest for walking.</p></div>
+    <div class="card"><div class="ic">🎒</div><h3>Tips</h3><p>Wear comfy shoes for cobblestones, bring water, and agree on the kalesa fare first.</p></div>
+  </div>
+  <ol class="steps">
+    <li><b>Morning</b><p>Walk the street early for soft light and quiet cobblestones.</p></li>
+    <li><b>Afternoon</b><p>Try empanada and bagnet, then browse pottery and crafts.</p></li>
+    <li><b>Evening</b><p>Take a kalesa ride and watch the lanterns switch on.</p></li>
+  </ol>
+  <p class="note">Distances and seasons are approximate; confirm locally before you travel.</p>
+</div></section>
+
+<section id="stay"><div class="wrap">
+  <div class="kicker">Accommodations</div>
+  <h2>Where to stay</h2>
+  <p class="lead">Staying in or near the heritage district means the street is on your doorstep.</p>
+  <div class="cards">
+    <div class="card"><div class="ic">🏨</div><h3>Heritage hotels</h3><p>Restored ancestral houses with period furniture and courtyards.</p></div>
+    <div class="card"><div class="ic">🛏️</div><h3>Boutique inns</h3><p>Small, character-rich stays a short walk from the cobblestones.</p></div>
+    <div class="card"><div class="ic">💼</div><h3>Budget guesthouses</h3><p>Simple, affordable rooms in and around Vigan City.</p></div>
+  </div>
+  <p class="note">Book early for weekends, holidays and festival dates, and check current rates and reviews.</p>
+</div></section>
+
+<section id="events" class="alt"><div class="wrap">
+  <div class="kicker">Events</div>
+  <h2>Festivals and celebrations</h2>
+  <ol class="steps">
+    <li><b>January</b><p>Longganisa Festival: a celebration of Vigan's famous sausage.</p></li>
+    <li><b>Holy Week</b><p>Processions and religious observances fill the heritage district.</p></li>
+    <li><b>May</b><p>Viva Vigan Binatbatan Festival of the Arts, with cotton-beating dance and street performances.</p></li>
+  </ol>
+  <p class="note">Event dates change each year; check Vigan City's official tourism channels before you go.</p>
+</div></section>
+
+<section id="contact"><div class="wrap">
+  <div class="kicker">Contact Us</div>
+  <h2>Get in touch</h2>
+  <div class="contact">
+    <div>
+      <p class="lead">Questions about visiting Calle Crisologo? Send us a message, or ask the Vigan City Tourism Office for current information on hours, tours and events.</p>
+      <p><strong>Location</strong><br>Calle Crisologo, Vigan City, Ilocos Sur, Philippines</p>
+    </div>
+    <form id="f">
+      <label for="n">Name</label><input id="n" required>
+      <label for="e">Email</label><input id="e" type="email" required>
+      <label for="m">Message</label><textarea id="m" required></textarea>
+      <button class="send" type="submit">Send message</button>
+      <div id="ok">Thanks! This demo form does not send mail yet.</div>
+    </form>
+  </div>
+</div></section>
+
+<footer>© Calle Crisologo · Historic Town of Vigan, Ilocos Sur, Philippines</footer>
+
+<div class="lightbox" id="lb"></div>
+<script>
+(function(){
+  var r=document.documentElement,$=function(s){return document.querySelector(s)};
+  $('#theme').onclick=function(){
+    var d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);
+    r.dataset.theme=d?'light':'dark';
+  };
+  var ul=$('#links');
+  $('#menu').onclick=function(){ul.classList.toggle('open')};
+  ul.onclick=function(){ul.classList.remove('open')};
+  var lb=$('#lb');
+  document.querySelectorAll('.photo').forEach(function(p){p.onclick=function(){lb.style.backgroundImage=getComputedStyle(p).backgroundImage;lb.classList.add('open')}});
+  lb.onclick=function(){lb.classList.remove('open')};
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('open')});
+  $('#f').onsubmit=function(e){e.preventDefault();$('#ok').style.display='block';this.reset()};
+  var links=document.querySelectorAll('#links a');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(x){
+      if(x.isIntersecting){links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+x.target.id)})}
+    })},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('header[id],section[id]').forEach(function(s){io.observe(s)});
+  }
+})();
+</script>
+</body>
+</html>
